@@ -1,13 +1,13 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'embulk/input/bigquery/version'
+require 'embulk/input/big-query-async/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "embulk-input-big-query-async"
   spec.version       = Embulk::Input::Big-query-async::VERSION
-  spec.authors       = ["Takeru Narita"]
-  spec.email         = ["naritano77@gmail.com"]
+  spec.authors       = ["Angelos Alexopoulos"]
+  spec.email         = ["alexopoulos7@gmail.com"]
   spec.description   = %q{embulk input plugin from bigquery.}
   spec.summary       = %q{Embulk input plugin from bigquery.}
   spec.homepage      = ""
