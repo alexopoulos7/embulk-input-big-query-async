@@ -1,4 +1,4 @@
-require "embulk/input/bigquery/version"
+require "embulk/input/big-query-async/version"
 require "google/cloud/bigquery"
 require 'erb'
 
