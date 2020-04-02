@@ -1,6 +1,6 @@
-# Embulk::Input::Bigquery
+# Embulk::Input::Big-query-async
 
-This is Embulk input plugin from Bigquery.
+This is Embulk input plugin from Big-query-async.
 
 ## Installation
 
@@ -12,7 +12,7 @@ install it yourself as:
 
 ```
 in:
-  type: bigquery-async
+  type: big-query-async
   project: 'project-name'
   keyfile: '/home/hogehoge/bigquery-keyfile.json'
   sql: 'SELECT price,category_id FROM [ecsite.products] GROUP BY category_id'
@@ -29,7 +29,7 @@ If, table name is changeable, then
 
 ```
 in:
-  type: bibigquery-asyncquery
+  type: big-query-async
   project: 'project-name'
   keyfile: '/home/hogehoge/bigquery-keyfile.json'
   sql_erb: 'SELECT price,category_id FROM [ecsite.products_<%= params["date"].strftime("%Y%m")  %>] GROUP BY category_id'
