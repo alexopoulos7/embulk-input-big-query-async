@@ -5,9 +5,21 @@ require 'erb'
 module Embulk
   module Input
     class InputBigquery < InputPlugin
-			Plugin.register_input('big-query-async', self)
+		Plugin.register_input('big-query-async', self)
 
-			def self.transaction(config, &control)
+	      # support config by file path or content which supported by org.embulk.spi.unit.LocalFile
+          # keyfile:
+          #   content: |
+        class LocalFile
+          def self.load(v)
+            if v.is_a?(String)
+              v
+            elsif v.is_a?(Hash)
+              JSON.parse(v['content'])
+            end
+          end
+        end
+          	def self.transaction(config, &control)
 				sql = config[:sql]
 				params = {}
 				unless sql
@@ -23,7 +35,7 @@ module Embulk
 
 				task = {
 					project: config[:project],
-					keyfile: config[:keyfile],
+					keyfile: config.param(:keyfile, LocalFile, nil),,
 					sql: sql,
 					columns: config[:columns],
 					params: params,
