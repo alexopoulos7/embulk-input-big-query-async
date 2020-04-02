@@ -35,7 +35,7 @@ module Embulk
 
 				task = {
 					project: config[:project],
-					keyfile: config.param(:keyfile, LocalFile, nil),,
+					keyfile: config.param(:keyfile, LocalFile, nil),
 					sql: sql,
 					columns: config[:columns],
 					params: params,
