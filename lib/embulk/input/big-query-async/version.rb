@@ -1,6 +1,6 @@
 module Embulk
   module Input
-    module Big-query-async
+    module Bigqueryasync
       VERSION = "0.0.1"
     end
   end

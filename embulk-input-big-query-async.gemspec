@@ -5,7 +5,7 @@ require 'embulk/input/big-query-async/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "embulk-input-big-query-async"
-  spec.version       = Embulk::Input::Big-query-async::VERSION
+  spec.version       = Embulk::Input::Bigqueryasync::VERSION
   spec.authors       = ["Angelos Alexopoulos"]
   spec.email         = ["alexopoulos7@gmail.com"]
   spec.description   = %q{embulk input plugin from bigquery.}
